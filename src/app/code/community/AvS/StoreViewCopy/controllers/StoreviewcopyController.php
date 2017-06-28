@@ -116,4 +116,11 @@ class AvS_StoreViewCopy_StoreviewcopyController extends Mage_Adminhtml_Controlle
 
         return false;
     }
+
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('catalog/products');
+
+    }
+
 }
